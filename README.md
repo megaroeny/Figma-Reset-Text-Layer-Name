@@ -1,4 +1,4 @@
-# A Figma plugin to reset your text layer names
+## A Figma plugin to reset your text layer names
 
 ![GIF example](/Artwork/artwork.gif)
 
