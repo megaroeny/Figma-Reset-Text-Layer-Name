@@ -1,5 +1,4 @@
 # A Figma plugin to reset your text layer names
-### *Reset your text layer names again so they auto update*
 
 ![GIF example](/Artwork/artwork.gif)
 
