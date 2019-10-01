@@ -1,10 +1,22 @@
-# A Figma plugin to reset text layer names
-Reset your text layer names again so they auto update
+This plugin template uses Typescript. If you are familiar with Javascript, Typescript will
+look very familiar. In fact, valid Javascript code is already valid Typescript code.
 
-Ever end up wanting to reset your layer names, so the name reflects your text content? How about having to do that repeatedly for TONS of layers or components? 😰  It's not possible to reset them all at once, UNTIL NOW!
+Typescript adds type annotations to variables. This allows code editors such as Visual Studio Code
+to provide information about the Figma API while you are writing code, as well as help catch bugs
+you previously didn't notice.
 
-"How do I get started?"
+For more information, visit https://www.typescriptlang.org/
 
-Easy! Just select any amount of text layers, and run the "Reset Text Layer Name" command. 
+Using Typescript requires a compiler to convert Typescript (code.ts) into Javascript (code.js)
+for the browser to run.
 
-Boom! You're done. 🎉
+To get the TypeScript compiler working:
+
+1. Download Visual Studio Code if you haven't already: https://code.visualstudio.com/.
+2. Install the TypeScript compiler globally: `sudo npm install -g typescript`.
+3. Open this directory in Visual Studio Code.
+4. Compile TypeScript to JavaScript: Run the "Terminal > Run Build Task..." menu item,
+    then select "tsc: watch - tsconfig.json". You will have to do this again every time
+    you reopen Visual Studio Code.
+
+That's it! Visual Studio Code will regenerate the JavaScript file every time you save.
