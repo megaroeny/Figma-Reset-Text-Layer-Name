@@ -1,7 +1,7 @@
 let layerCount = (figma.currentPage.selection.length);
 figma.currentPage.selection.forEach(node => {
     if (node.type == 'TEXT') {
-        node.autoRename = true;
+        node.name = "";
         figma.closePlugin(layerCount + " Text layer names reset ✅");
         return;
     }
