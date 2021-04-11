@@ -11,11 +11,11 @@ figma.currentPage.selection.forEach(node => {
 		successCount++
 	}
 	else {
-		figma.notify(node.name + " not a Text Layer", { timeout: 2000 })
+		figma.notify('For "' + node.name + '" the name is not reset. Select the Text Layer.')
 	}
 })
 
-if (layerCount >= 1) {
+if (layerCount >= 1 && successCount >= 1) {
 	figma.notify(successCount + " Text Layer names reset ✅", { timeout: 2000 })
 }
 
