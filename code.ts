@@ -1,14 +1,23 @@
-let layerCount = (figma.currentPage.selection.length)
-
+let successCount = 0,
+  layerCount = figma.currentPage.selection.length;
+if (layerCount === 0) {
+  figma.closePlugin("Select at least one Text Layer")
+}
 figma.currentPage.selection.forEach(node => {
-  if (node.type == 'TEXT') {
+  if (node.type === "TEXT") {
     node.name = "";
-    figma.closePlugin(layerCount + " Text layer names reset ✅");
-    return
+    successCount++
   }
-
   else {
-    figma.notify("That's not a Text layer silly!", { timeout: 2000 });
-    figma.closePlugin();
+    figma.notify('⚠️ "' + node.name + '" name was not reset. A text layer must be selected.',
+      { timeout: 4000 })
   }
 })
+if (layerCount > 1 && successCount > 1) {
+  figma.notify("✅ " + successCount + " text layer names reset", { timeout: 2000 })
+}
+else if (layerCount == 1 && successCount == 1) {
+  figma.notify("✅ Text layer name reset", { timeout: 2000 })
+}
+
+figma.closePlugin();
