@@ -16,7 +16,7 @@ figma.currentPage.selection.forEach(node => {
 if (layerCount > 1 && successCount > 1) {
   figma.notify("✅ " + successCount + " text layer names reset", { timeout: 2000 })
 }
-else if (layerCount == 1 && successCount == 1) {
+else if (successCount == 1) {
   figma.notify("✅ Text layer name reset", { timeout: 2000 })
 }
 
