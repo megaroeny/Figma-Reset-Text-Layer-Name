@@ -1,5 +1,6 @@
 {
   "devDependencies": {
-    "@figma/plugin-typings": "^1.19.3"
+    "@figma/plugin-typings": "*",
+    "typescript": "^5.3.3"
   }
 }
